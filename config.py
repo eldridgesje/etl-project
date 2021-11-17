@@ -1,2 +1,2 @@
-username = postgres
-password = bootcamp
+username = "postgres"
+password = "bootcamp"
