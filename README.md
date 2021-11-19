@@ -12,6 +12,10 @@ Repo for the ETL project for the Northwestern Data Science Bootcamp
     * `WV.1_Size_of_the_economy.xls` (original data file)
     * `WV.2_Global_goals_ending_poverty_and_improving_lives.xls` (original data file)
     * `WV.3_Global_goals_promoting_sustainability.xls` (original data file)
+    * `WV1.csv` (CSV file for use in Pandas)
+    * `WV2.csv` (CSV file for use in Pandas)
+    * `WV3.csv` (CSV file for use in Pandas)
+
 * `etl_notebook.ipynb` (Jupyter Notebook for ETL)
 * `etl_technical_report.ipynb` (Jupyter Notebook containing the technical report)
 * `queries.sql` (SQL file for creating and joining tables in postgres)
