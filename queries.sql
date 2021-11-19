@@ -7,9 +7,9 @@ CREATE TABLE economy_size (
     gross_national_income_atlas_method_2019 FLOAT,
     gross_national_income_per_capita_atlas_method_2019 FLOAT,
     purchasing_power_parity_gross_national_income_2019 FLOAT,
-    per_capita_2019 FLOAT,
-    gross_domestic_product_2019 FLOAT,
-    per_capita_growth_2019 FLOAT
+    ppp_gni_per_capita_2019 FLOAT,
+    gross_domestic_product_growth_2019 FLOAT,
+    per_capita_gdp_growth_2019 FLOAT
 );
 
 CREATE TABLE ending_poverty (
@@ -24,7 +24,7 @@ CREATE TABLE ending_poverty (
     primary_completion_rate_2018 FLOAT,
     vulnerable_employment_2019 FLOAT,
     contributing_family_workers_and_own_account_workers_female FLOAT,
-    labor_productivity_2015_18 FLOAT
+    labor_productivity_growth_2015_18 FLOAT
 );
 
 CREATE TABLE promoting_sustainability (
@@ -52,7 +52,7 @@ SELECT * FROM ending_poverty;
 SELECT * FROM promoting_sustainability;
 
 -- Join tables
-SELECT es.country, es.population_2019, es.gross_domestic_product_2019, ep.percentage_share_of_income_or_consumption_2007_18, ep.prevalence_of_child_malnutrition_2020, ep.under_five_mortality_rate_2019, ps.people_using_safely_managed_drinking_water_services_2017, ps.ambient_pm2_5_air_pollution_2016
+SELECT es.country, es.population_2019, es.gross_domestic_product_growth_2019, ep.percentage_share_of_income_or_consumption_2007_18, ep.prevalence_of_child_malnutrition_2020, ep.under_five_mortality_rate_2019, ps.people_using_safely_managed_drinking_water_services_2017, ps.ambient_pm2_5_air_pollution_2016
 FROM economy_size as es
 INNER JOIN ending_poverty as ep
 ON es.country = ep.country
